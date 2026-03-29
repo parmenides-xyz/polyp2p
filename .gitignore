@@ -1,0 +1,26 @@
+# Compiler files
+cache/
+out/
+artifacts/
+
+# Broadcast logs
+broadcast/
+
+# Docs
+docs/
+
+# Dotenv file
+.env
+
+# Dependencies
+node_modules/
+
+# Build output
+packages/sdk/dist/
+app/dist/
+
+# OS
+.DS_Store
+
+# IDE
+.vscode/

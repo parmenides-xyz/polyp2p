@@ -1,0 +1,19 @@
+{
+    "name": "@polylend/sdk",
+    "description": "TypeScript SDK for PolyLend protocol",
+    "version": "0.1.0",
+    "type": "module",
+    "main": "./src/index.ts",
+    "types": "./src/index.ts",
+    "scripts": {
+        "build": "tsc",
+        "test": "vitest"
+    },
+    "dependencies": {
+        "viem": "^2.30.0"
+    },
+    "devDependencies": {
+        "typescript": "^5.8.0",
+        "vitest": "^3.2.0"
+    }
+}

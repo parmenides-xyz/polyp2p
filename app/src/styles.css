@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: "Satoshi";
+    src: url("/fonts/satoshi/Satoshi-Variable.woff2") format("woff2");
+    font-weight: 300 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Geist Mono";
+    src: url("/fonts/geist-mono/GeistMono-Variable.woff2") format("woff2");
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@theme {
+    --color-base-background: #191919;
+    --color-base-plane: #1a1a1a;
+    --color-base-alt: #232323;
+    --color-base-border: #232323;
+
+    --color-primary: #ffffff;
+    --color-secondary: #6e6e6e;
+    --color-tertiary: #6e6e6e;
+    --color-disabled: #525252;
+
+    --color-positive: #22c55e;
+    --color-negative: #ef4444;
+    --color-accent: #60a5fa;
+    --color-accent-hover: #93c5fd;
+
+    --color-card: #1a1a1a;
+    --color-card-header: #1c1c1c;
+    --color-card-border: #232323;
+
+    --font-sans: "Satoshi", ui-sans-serif, system-ui, sans-serif;
+    --font-display: "Satoshi", ui-sans-serif, system-ui, sans-serif;
+    --font-mono: "Geist Mono", ui-monospace, monospace;
+}
+
+html {
+    background-color: var(--color-base-background);
+    color: var(--color-primary);
+    color-scheme: dark;
+}
+
+body {
+    font-family: var(--font-display);
+    min-width: 400px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@utility press-down {
+    &:active:not([aria-disabled="true"]) {
+        transform: translateY(0.5px);
+    }
+}
+
+@keyframes blur-fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(-4px);
+        filter: blur(4px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+
+@utility animate-in {
+    animation: blur-fade-in 0.25s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
